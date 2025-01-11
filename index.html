@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Selfie Editor - Brighten & Soften Skin</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Simple Selfie Editor</h1>
+      <p>Brighten & soften your selfies to make your skin glow!</p>
+    </header>
+
+    <main>
+      <!-- Modern Upload Button -->
+      <div class="upload-section">
+        <label for="upload-input" class="upload-label">
+          <span>Upload Selfie</span>
+          <input type="file" id="upload-input" accept="image/*" />
+        </label>
+      </div>
+
+      <!-- Image Editor -->
+      <div class="editor">
+        <canvas id="photo-canvas"></canvas>
+      </div>
+
+      <!-- Notification -->
+      <div id="notification" class="notification">
+        <p>Your photo has been edited! Refresh the page to start over.</p>
+      </div>
+
+      <!-- Warning -->
+      <div id="warning" class="warning">
+        <p>Please upload an image first!</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button id="brighten-btn" disabled>Brighten Skin</button>
+        <button id="soften-btn" disabled>Soften Skin</button>
+        <button id="cinematic-btn" disabled>Cinematic Filter</button>
+        <button id="refresh-btn">Refresh Page</button>
+        <button id="download-btn" disabled>Download Photo</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ by Ray Dharma & Selpiana Sutisna | &copy; <span id="copyright-year"></span></p>
+    </footer>
+  </div>
+
+  <!-- CamanJS Library -->
+  <script src="lib/caman.full.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
